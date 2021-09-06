@@ -10,7 +10,6 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 ## Flix Part 1
 
 ### User Stories
-`TODO://` In the **User Stories section below**, add an `x` in the `-[ ]` like this `- [x]` for any user story you complete. (🚫 Remove this paragraph after checking off completed user stories)
 
 #### REQUIRED (10pts)
 - [x] (2pts) User sees an app icon on the home screen and a styled launch screen.
@@ -23,7 +22,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthrough GIF
 
-<img src="https://imgur.com/a/GqlHs9S" width=250><br>
+<img src="https://imgur.com/a/GqlHs9S" width=600><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+This experience introduced many new concepts. It demonstrates the use of a launchscreen and how to import app icon images depending on iOS device. The app focuses more on iPhone functionality. Another new topic which I learned is how to use cocoapods to import external libraries and add more functionality to custom cells (helpful for repeating content such as movies) inside an table. The custom cells were made possible through a new cocoatouch class. The tableView element is the base for holding cells and introduced the need to declare a delegate and data source components.
