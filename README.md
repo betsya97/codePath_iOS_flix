@@ -22,7 +22,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthrough GIF
 
-<img src="https://imgur.com/a/GqlHs9S" width=600><br>
+<img src="https://imgur.com/a/80TPvMd" width=250><br>
 
 ### Notes
-This experience introduced many new concepts. It demonstrates the use of a launchscreen and how to import app icon images depending on iOS device. The app focuses more on iPhone functionality. Another new topic which I learned is how to use cocoapods to import external libraries and add more functionality to custom cells (helpful for repeating content such as movies) inside an table. The custom cells were made possible through a new cocoatouch class. The tableView element is the base for holding cells and introduced the need to declare a delegate and data source components.
+This experience introduced many new concepts. It demonstrates the use of a launchscreen and how to import app icon images depending on iOS device. The app focuses more on iPhone functionality. Another new topic which I learned is how to use cocoapods to import external libraries and add more functionality to custom cells (helpful for repeating content such as movies) inside an table. The custom cells were made possible through a new cocoatouch class. The tableView element is the base for holding cells and introduced the need to declare a delegate and data source components. APIs were also new topic for me, and it was cool to see how it updates the movies in realtime. 
