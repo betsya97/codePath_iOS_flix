@@ -42,7 +42,7 @@ Describe any challenges encountered while building the app.
 
 ### App Walkthrough GIF
 
-![flix](https://i.imgur.com/gUZiRpx.gif)
+![flix](https://i.imgur.com/Hy3vSD8.gif)
 
 
 ### Notes
