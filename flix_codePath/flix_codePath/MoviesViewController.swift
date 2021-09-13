@@ -12,6 +12,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
    
     //properties
     @IBOutlet weak var tableView: UITableView!
+    
     var movies = [[String:Any]]() //looking at an array of dictionaries
     
     override func viewDidLoad() {
@@ -74,11 +75,26 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        print("Loading up the details screen")
+        //pick the movie to the new controller
+        let cell = sender as! UITableViewCell
+        //makes to sure to pick the right cell, so change default sender and cast with "!"
+        
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        //pass the slected movie to detailsviewcontroller
+        let movie = movies[indexPath.row]
+        
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie //type cast selected movie
+
+        tableView.deselectRow(at: indexPath, animated: true) //change selected highlight on app
+        
     }
-    */
+    
+    
 
 }
