@@ -20,8 +20,22 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         //similar to the tableview
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        //layout
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        //controls space between rows with pixels
+        layout.minimumLineSpacing = 4
+        layout.minimumInteritemSpacing = 4
+        
+        //dynamic layout needs width and height for posters
+        let width = (view.frame.size.width - layout.minimumLineSpacing * 2)/3
+        //3 dynamic width posters
+        //2 is symbolizes the spaces between the next poster
+        layout.itemSize = CGSize(width: width, height: width*3/2 )
+        
         // movies similar to Shang-Chi
-        let url = URL(string: "https://api.themoviedb.org/3/movie/297762/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
+        let url = URL(string: "https://api.themoviedb.org/3/movie/566525/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
